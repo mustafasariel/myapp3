@@ -8,19 +8,19 @@ const myArr = [
     cardTitle: "1",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
-    imageUrl: "https://picsum.photos/id/2/40/50",
+    imageUrl:   "./logo192.png",
   },
   {
-    cardTitle: "2",
+    cardTitle: "fdf",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
-    imageUrl: "https://picsum.photos/id/2/40/50",
+    imageUrl: "./logo192.png",
   },
   {
     cardTitle: "3",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
-    imageUrl: "https://picsum.photos/id/2/40/50",
+    imageUrl: "./logo192.png",
   },
 ];
 
@@ -81,10 +81,6 @@ function App2() {
               ></Card>
             </Collapse>
           </div>
-  
-
-   
-
         </div>
       </div>
     </div>
