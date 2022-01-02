@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import Card from "./Card";
 
 const Collapse = (props) => {
-    console.log(props.children)
+  console.log(props.children)
   return (
-    <div className="col-md-03">
+    <div >
       <a
-        className="btn btn-primary"
+        className="btn btn-primary w-100"
         data-bs-toggle="collapse"
-        href= {"#".concat(props.href)}
+        href={"#".concat(props.href)}
         role="button"
         aria-expanded="false"
         aria-controls="collapseExample"
@@ -17,14 +17,12 @@ const Collapse = (props) => {
         {props.name}
       </a>
 
-      <div  className="collapse" id={props.href}>
-        <div className="card card-body">
-          
-          {props.children}
-         
-        </div>
+      <div className="collapse show" id={props.href}>
+        {props.children}
+
       </div>
     </div>
+
   );
 };
 
