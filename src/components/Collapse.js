@@ -1,29 +1,47 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Card from "./Card";
 
-const Collapse = (props) => {
-  console.log(props.children)
-  return (
-    <div >
-      <a
-        className="btn btn-primary w-100"
-        data-bs-toggle="collapse"
-        href={"#".concat(props.href)}
-        role="button"
-        aria-expanded="false"
-        aria-controls="collapseExample"
-      >
-        {props.name}
-      </a>
+class Collapse extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showContent: false,
+      p1: "true",
+      p2: "false",
+    };
+  }
 
-      <div className="collapse show" id={props.href}>
-        {props.children}
+  showMore = () => {
+    this.setState({ showContent: !this.state.showContent });
+  };
 
+  componentDidMount()
+  {
+    console.log("component oluşturuldu");
+  }
+  componentDidUpdate()
+  {
+    console.log("component update edildi");
+  }
+  componentWillUnmount()
+  {
+    console.log("component silindi");   
+  }
+
+  render() {
+    return (
+      <div>
+        <button className="btn btn-primary w-100" onClick={this.showMore}>
+          {this.props.children.props.cardTitle}
+        </button>
+        {this.state.showContent ? (
+          <div className="collapse show" id={this.props.href}>
+            {this.props.children}
+          </div>
+        ) : null}
       </div>
-    </div>
-
-  );
-};
+    );
+  }
+}
 
 export default Collapse;

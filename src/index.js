@@ -5,22 +5,25 @@ import Collapse from "./components/Collapse";
 
 const myArr = [
   {
-    cardTitle: "1",
+    cardTitle: "galatasaray",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
     imageUrl:   "./logo192.png",
+    showContent:true
   },
   {
-    cardTitle: "fdf",
+    cardTitle: "fenerbahçe",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
     imageUrl: "./logo192.png",
+    showContent:true
   },
   {
-    cardTitle: "3",
+    cardTitle: "beşiktaş",
     cardContent: "merhaba",
     cardFooter: "3 dk önce güncellendi",
     imageUrl: "./logo192.png",
+    showContent:false
   },
 ];
 
@@ -58,6 +61,7 @@ function App2() {
                 cardContent={myArr[0].cardContent}
                 cardFooter={myArr[0].cardFooter}
                 imageUrl={myArr[0].imageUrl}
+                showContent={myArr[0].showContent}
               ></Card>
             </Collapse>
           </div>
@@ -68,6 +72,7 @@ function App2() {
                 cardContent={myArr[1].cardContent}
                 cardFooter={myArr[1].cardFooter}
                 imageUrl={myArr[1].imageUrl}
+                showContent={myArr[1].showContent}
               ></Card>
             </Collapse>
           </div>
@@ -78,6 +83,7 @@ function App2() {
                 cardContent={myArr[2].cardContent}
                 cardFooter={myArr[2].cardFooter}
                 imageUrl={myArr[2].imageUrl}
+                showContent={myArr[2].showContent}
               ></Card>
             </Collapse>
           </div>
